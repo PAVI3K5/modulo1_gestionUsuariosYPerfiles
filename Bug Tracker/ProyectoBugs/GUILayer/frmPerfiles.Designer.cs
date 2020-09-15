@@ -33,20 +33,25 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPerfiles
             // 
             this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nombre});
             this.dgvPerfiles.Location = new System.Drawing.Point(12, 31);
             this.dgvPerfiles.Name = "dgvPerfiles";
-            this.dgvPerfiles.Size = new System.Drawing.Size(191, 151);
+            this.dgvPerfiles.Size = new System.Drawing.Size(284, 151);
             this.dgvPerfiles.TabIndex = 0;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(216, 31);
+            this.btnNuevo.Location = new System.Drawing.Point(319, 31);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 24);
             this.btnNuevo.TabIndex = 3;
@@ -56,7 +61,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(216, 76);
+            this.btnEditar.Location = new System.Drawing.Point(319, 76);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 24);
             this.btnEditar.TabIndex = 4;
@@ -65,7 +70,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(216, 122);
+            this.BtnEliminar.Location = new System.Drawing.Point(319, 122);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(64, 24);
             this.BtnEliminar.TabIndex = 5;
@@ -74,7 +79,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(216, 191);
+            this.btnVolver.Location = new System.Drawing.Point(319, 191);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(64, 24);
             this.btnVolver.TabIndex = 7;
@@ -82,11 +87,23 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.Width = 50;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
             // frmPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 226);
+            this.ClientSize = new System.Drawing.Size(395, 226);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -94,6 +111,7 @@
             this.Controls.Add(this.dgvPerfiles);
             this.Name = "frmPerfiles";
             this.Text = "Perfiles";
+            this.Load += new System.EventHandler(this.frmPerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).EndInit();
             this.ResumeLayout(false);
 
@@ -106,5 +124,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
     }
 }
