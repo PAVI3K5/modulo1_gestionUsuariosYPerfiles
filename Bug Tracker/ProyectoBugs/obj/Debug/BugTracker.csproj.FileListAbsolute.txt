@@ -1,0 +1,34 @@
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\bin\Debug\ProyectoBugs.exe.config
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\bin\Debug\ProyectoBugs.exe
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\bin\Debug\ProyectoBugs.pdb
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\ProyectoBugs.exe
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmPrincipal.resources
+C:\Users\agust\Desktop\PAV12020-master\LPCFacturas\ProyectoBugs\obj\Debug\BugTracker.csprojAssemblyReference.cache
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe.config
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\bin\Debug\ProyectoBugs.pdb
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\BugTracker.csprojAssemblyReference.cache
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmPrincipal.resources
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
+C:\Users\agust\Desktop\BugTracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe.config
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.pdb
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csprojAssemblyReference.cache
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmPrincipal.resources
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\BugTracker\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmPerfiles.resources
