@@ -48,5 +48,11 @@ namespace BugTacker.GUILayer
             frmDetalle.ShowDialog();
 
         }
+
+        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPerfiles perfiles = new frmPerfiles();
+            perfiles.ShowDialog();
+        }
     }
 }

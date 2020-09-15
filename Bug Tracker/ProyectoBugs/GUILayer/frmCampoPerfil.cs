@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace ProyectoBugs.GUILayer
 {
-    public partial class frmPerfiles : Form
+    public partial class frmCampoPerfil : Form
     {
-        public frmPerfiles()
+        public frmCampoPerfil()
         {
             InitializeComponent();
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmCampoPerfil campoPerfil = new frmCampoPerfil();
-            campoPerfil.ShowDialog();
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+
         }
     }
 }
