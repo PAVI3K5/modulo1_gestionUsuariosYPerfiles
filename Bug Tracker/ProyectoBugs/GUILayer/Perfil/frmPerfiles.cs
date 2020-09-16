@@ -16,20 +16,49 @@ namespace ProyectoBugs.GUILayer
     {
         PerfilService oPerfilService = new PerfilService();
 
-        private void cargarGrilla(DataGridView grilla, IList<Perfil> lista)
-        {
-            grilla.Rows.Clear();
-            //for(int i = 0; i<lista.Count; i++)
-            foreach (var perfil in lista)
-            {
-                grilla.Rows.Add(perfil.IdPerfil.ToString(),
-                                perfil.Nombre.ToString());
-            }
-        }
-
         public frmPerfiles()
         {
             InitializeComponent();
+            InitializeDataGridView();
+        }
+
+
+        private void frmPerfiles_Load(object sender, EventArgs e)
+        {
+            dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
+        }
+
+        private void InitializeDataGridView()
+        {
+            // Cree un DataGridView no vinculado declarando un recuento de columnas.
+            dgvPerfiles.ColumnCount = 2;
+            dgvPerfiles.ColumnHeadersVisible = true;
+
+            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
+            dgvPerfiles.AutoGenerateColumns = false;
+
+            // Cambia el estilo de la cabecera de la grilla.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            dgvPerfiles.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
+            dgvPerfiles.Columns[0].Name = "ID";
+            dgvPerfiles.Columns[0].DataPropertyName = "IdPerfil";
+            // Definimos el ancho de la columna.
+
+            dgvPerfiles.Columns[1].Name = "Nombre Perfil";
+            dgvPerfiles.Columns[1].DataPropertyName = "Nombre";
+            dgvPerfiles.Columns[1].Width = 150;
+
+            // Cambia el tamaño de la altura de los encabezados de columna.
+            dgvPerfiles.AutoResizeColumnHeadersHeight();
+
+            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            dgvPerfiles.AutoResizeRows(
+                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -43,9 +72,22 @@ namespace ProyectoBugs.GUILayer
             this.Hide();
         }
 
-        private void frmPerfiles_Load(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            cargarGrilla(dgvPerfiles, oPerfilService.recuperarTodos());
+            frmCampoPerfil campoPerfil = new frmCampoPerfil();
+
+            var perfil = (Perfil)dgvPerfiles.CurrentRow.DataBoundItem;
+            campoPerfil.InicializarFormulario(frmCampoPerfil.FormMode.actualizar, perfil);
+            campoPerfil.ShowDialog();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            frmCampoPerfil campoPerfil = new frmCampoPerfil();
+
+            var perfil = (Perfil)dgvPerfiles.CurrentRow.DataBoundItem;
+            campoPerfil.InicializarFormulario(frmCampoPerfil.FormMode.eliminar, perfil);
+            campoPerfil.ShowDialog();
         }
     }
 }

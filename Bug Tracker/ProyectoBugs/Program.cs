@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTacker.GUILayer;
+using ProyectoBugs.GUILayer;
 
 namespace BugTacker
 {
@@ -17,7 +18,7 @@ namespace BugTacker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmPerfiles());
         }
     }
 }
