@@ -25,6 +25,11 @@ namespace ProyectoBugs.GUILayer
 
         private void frmPerfiles_Load(object sender, EventArgs e)
         {
+            CargarGrilla();
+        }
+
+        public void CargarGrilla()
+        {
             dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
         }
 
@@ -65,6 +70,7 @@ namespace ProyectoBugs.GUILayer
         {
             frmCampoPerfil campoPerfil = new frmCampoPerfil();
             campoPerfil.ShowDialog();
+            CargarGrilla();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -79,6 +85,7 @@ namespace ProyectoBugs.GUILayer
             var perfil = (Perfil)dgvPerfiles.CurrentRow.DataBoundItem;
             campoPerfil.InicializarFormulario(frmCampoPerfil.FormMode.actualizar, perfil);
             campoPerfil.ShowDialog();
+            CargarGrilla();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -88,6 +95,7 @@ namespace ProyectoBugs.GUILayer
             var perfil = (Perfil)dgvPerfiles.CurrentRow.DataBoundItem;
             campoPerfil.InicializarFormulario(frmCampoPerfil.FormMode.eliminar, perfil);
             campoPerfil.ShowDialog();
+            CargarGrilla();
         }
     }
 }

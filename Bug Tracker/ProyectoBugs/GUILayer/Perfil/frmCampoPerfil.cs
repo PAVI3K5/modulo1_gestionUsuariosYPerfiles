@@ -1,4 +1,5 @@
 ﻿using BugTacker.Entities;
+using ProyectoBugs.BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,16 @@ namespace ProyectoBugs.GUILayer
     public partial class frmCampoPerfil : Form
     {
         private FormMode formMode = FormMode.nuevo;
+        
         private Perfil oPerfilSelected;
+        private PerfilService oPerfilService;
 
         public frmCampoPerfil()
         {
             InitializeComponent();
+
+            oPerfilService = new PerfilService();
+            ;
         }
 
         public enum FormMode
@@ -84,7 +90,13 @@ namespace ProyectoBugs.GUILayer
             {
                 case FormMode.nuevo:
                     {
-
+                        var oPerfil = new Perfil();
+                        oPerfil.Nombre = txtNombrePerfil.Text;
+                        if (oPerfilService.CrearPerfil(oPerfil))
+                        {
+                            MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
                         break;
                     }
 

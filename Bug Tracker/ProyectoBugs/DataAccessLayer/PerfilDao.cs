@@ -27,8 +27,14 @@ namespace ProyectoBugs.DataAccessLayer
             return listadoPerfiles;
         }
 
+        internal bool Create(Perfil oPerfil)
+        {
+            string query = "DECLARE @idPerfil int;";
+            query += "Insert INTO Perfiles (nombre, borrado) VALUES ('" + oPerfil.Nombre + "', 0);";
 
-      
+            return DBHelper.GetDBHelper().EjecutarSQL(query) > 0;
+        }
+
 
         private Perfil MappingPerfil(DataRow row)
         {

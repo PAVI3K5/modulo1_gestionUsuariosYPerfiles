@@ -20,5 +20,10 @@ namespace ProyectoBugs.BusinessLayer
         {
             return oPerfilDao.GetAll();
         }
+
+        internal bool CrearPerfil(Perfil oPerfil)
+        {
+            return oPerfilDao.Create(oPerfil);
+        }
     }
 }
