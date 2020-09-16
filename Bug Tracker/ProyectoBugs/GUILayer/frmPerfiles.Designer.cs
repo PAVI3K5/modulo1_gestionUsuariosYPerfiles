@@ -46,7 +46,7 @@
             this.nombre});
             this.dgvPerfiles.Location = new System.Drawing.Point(12, 31);
             this.dgvPerfiles.Name = "dgvPerfiles";
-            this.dgvPerfiles.Size = new System.Drawing.Size(284, 151);
+            this.dgvPerfiles.Size = new System.Drawing.Size(292, 131);
             this.dgvPerfiles.TabIndex = 0;
             // 
             // id
@@ -64,7 +64,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnNuevo.Location = new System.Drawing.Point(319, 31);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 180);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 24);
             this.btnNuevo.TabIndex = 3;
@@ -75,7 +75,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnEditar.Location = new System.Drawing.Point(319, 76);
+            this.btnEditar.Location = new System.Drawing.Point(82, 180);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 24);
             this.btnEditar.TabIndex = 4;
@@ -85,7 +85,7 @@
             // BtnEliminar
             // 
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.BtnEliminar.Location = new System.Drawing.Point(319, 122);
+            this.BtnEliminar.Location = new System.Drawing.Point(162, 180);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(64, 24);
             this.BtnEliminar.TabIndex = 5;
@@ -95,7 +95,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVolver.Location = new System.Drawing.Point(319, 181);
+            this.btnVolver.Location = new System.Drawing.Point(286, 180);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(64, 24);
             this.btnVolver.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 226);
+            this.ClientSize = new System.Drawing.Size(369, 216);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.btnEditar);

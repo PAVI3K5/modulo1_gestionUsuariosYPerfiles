@@ -44,7 +44,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(738, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(394, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -54,9 +54,9 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.perfilesToolStripMenuItem,
             this.formulariosToolStripMenuItem});
-            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 11F);
+            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // perfilesToolStripMenuItem
@@ -74,9 +74,9 @@
             // 
             // salirToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 11F);
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -85,11 +85,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(738, 362);
+            this.ClientSize = new System.Drawing.Size(394, 239);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Calibri", 11F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.Text = "Menú Principal - LPC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

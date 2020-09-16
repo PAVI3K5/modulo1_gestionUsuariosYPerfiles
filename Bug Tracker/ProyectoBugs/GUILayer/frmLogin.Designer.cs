@@ -40,26 +40,26 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.Location = new System.Drawing.Point(22, 26);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(60, 18);
+            this.lblUsuario.Size = new System.Drawing.Size(72, 18);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.lblClave.Location = new System.Drawing.Point(22, 66);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(46, 18);
+            this.lblClave.Size = new System.Drawing.Size(55, 18);
             this.lblClave.TabIndex = 1;
             this.lblClave.Text = "Clave:";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Location = new System.Drawing.Point(88, 157);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(92, 32);
@@ -70,8 +70,8 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.Location = new System.Drawing.Point(188, 157);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(200, 157);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 32);
             this.btnSalir.TabIndex = 3;
@@ -81,19 +81,19 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.txtUsuario.Location = new System.Drawing.Point(88, 22);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtUsuario.Location = new System.Drawing.Point(100, 24);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(192, 25);
+            this.txtUsuario.Size = new System.Drawing.Size(192, 24);
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(88, 66);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtPassword.Location = new System.Drawing.Point(100, 66);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(192, 25);
+            this.txtPassword.Size = new System.Drawing.Size(192, 24);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyDown);
@@ -101,13 +101,13 @@
             // lblMensajeError
             // 
             this.lblMensajeError.AutoSize = true;
-            this.lblMensajeError.Font = new System.Drawing.Font("Calibri", 11F);
+            this.lblMensajeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblMensajeError.Image = global::ProyectoBugs.Properties.Resources.iconfinder_exclamation_mark_triangle_sign_caution_3643775__1_;
             this.lblMensajeError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblMensajeError.Location = new System.Drawing.Point(22, 114);
             this.lblMensajeError.Name = "lblMensajeError";
             this.lblMensajeError.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblMensajeError.Size = new System.Drawing.Size(41, 18);
+            this.lblMensajeError.Size = new System.Drawing.Size(52, 18);
             this.lblMensajeError.TabIndex = 6;
             this.lblMensajeError.Text = "           ";
             this.lblMensajeError.TextAlign = System.Drawing.ContentAlignment.TopCenter;
