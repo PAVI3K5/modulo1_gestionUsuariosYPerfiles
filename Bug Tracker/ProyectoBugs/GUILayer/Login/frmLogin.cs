@@ -95,3 +95,8 @@ namespace BugTacker.GUILayer
         }
     }
 }
+
+
+
+
+//Comentario de prueba merge
