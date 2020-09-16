@@ -53,22 +53,22 @@
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Usuario.cs" />
-    <Compile Include="GUILayer\frmCampoPerfil.cs">
+    <Compile Include="GUILayer\Perfil\frmCampoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmCampoPerfil.Designer.cs">
+    <Compile Include="GUILayer\Perfil\frmCampoPerfil.Designer.cs">
       <DependentUpon>frmCampoPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmPerfiles.cs">
+    <Compile Include="GUILayer\Perfil\frmPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmPerfiles.Designer.cs">
+    <Compile Include="GUILayer\Perfil\frmPerfiles.Designer.cs">
       <DependentUpon>frmPerfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmLogin.cs">
+    <Compile Include="GUILayer\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmLogin.Designer.cs">
+    <Compile Include="GUILayer\Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmPrincipal.cs">
@@ -79,13 +79,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUILayer\frmCampoPerfil.resx">
+    <EmbeddedResource Include="GUILayer\Perfil\frmCampoPerfil.resx">
       <DependentUpon>frmCampoPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmPerfiles.resx">
+    <EmbeddedResource Include="GUILayer\Perfil\frmPerfiles.resx">
       <DependentUpon>frmPerfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmLogin.resx">
+    <EmbeddedResource Include="GUILayer\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
