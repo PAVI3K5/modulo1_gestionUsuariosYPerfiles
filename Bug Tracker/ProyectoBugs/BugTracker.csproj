@@ -132,5 +132,8 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Close X.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_exclamation-mark-triangle-sign-caution_3643775 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

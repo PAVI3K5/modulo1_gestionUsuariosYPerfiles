@@ -27,6 +27,9 @@ namespace ProyectoBugs.DataAccessLayer
             return listadoPerfiles;
         }
 
+
+      
+
         private Perfil MappingPerfil(DataRow row)
         {
             Perfil oPerfil = new Perfil

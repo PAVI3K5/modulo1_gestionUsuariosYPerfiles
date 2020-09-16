@@ -34,15 +34,19 @@ namespace BugTacker.GUILayer
             //Validamos que se haya ingresado un usuario.
             if ((txtUsuario.Text == ""))
             {
-                MessageBox.Show("Se debe ingresar un usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mensajeError("Se debe ingresar un usuario.");
+                txtUsuario.Focus();
                 return;
+                
             }
 
             //Validamos que se haya ingresado una password
             if ((txtPassword.Text == ""))
             {
-                MessageBox.Show("Se debe ingresar una contraseña.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mensajeError("Se debe ingresar una contraseña.");
+                txtUsuario.Focus();
                 return;
+               
             }
 
 
@@ -52,7 +56,7 @@ namespace BugTacker.GUILayer
             {
                 txtPassword.Focus();
                 //Mostramos un mensaje indicando que el usuario/password es invalido.
-                MessageBox.Show("Debe ingresar usuario y/o contraseña válidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                mensajeError("Debe ingresar usuario y/o contraseña válidos");
                 this.txtPassword.Text = string.Empty;
     
             }
@@ -84,7 +88,10 @@ namespace BugTacker.GUILayer
 
         }
 
-  
-        
+        private void mensajeError(string msj)
+        {
+            lblMensajeError.Text = "         " + msj;
+            lblMensajeError.Visible = true;
+        }
     }
 }

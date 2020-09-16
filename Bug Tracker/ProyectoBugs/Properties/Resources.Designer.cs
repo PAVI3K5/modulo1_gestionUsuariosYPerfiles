@@ -59,5 +59,15 @@ namespace ProyectoBugs.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_exclamation_mark_triangle_sign_caution_3643775__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_exclamation-mark-triangle-sign-caution_3643775 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
