@@ -75,7 +75,7 @@ namespace ProyectoBugs.GUILayer
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

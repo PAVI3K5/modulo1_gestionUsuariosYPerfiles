@@ -93,6 +93,8 @@ namespace BugTacker.GUILayer
             lblMensajeError.Text = "         " + msj;
             lblMensajeError.Visible = true;
         }
+
+ 
     }
 }
 

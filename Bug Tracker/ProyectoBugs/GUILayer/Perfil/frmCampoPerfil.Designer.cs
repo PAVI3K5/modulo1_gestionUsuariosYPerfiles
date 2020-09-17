@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lvlNombre = new System.Windows.Forms.Label();
             this.txtNombrePerfil = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,23 +36,25 @@
             this.lvlCambioNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lvlNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre perfil: ";
+            this.lvlNombre.AutoSize = true;
+            this.lvlNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lvlNombre.Location = new System.Drawing.Point(12, 25);
+            this.lvlNombre.Name = "lvlNombre";
+            this.lvlNombre.Size = new System.Drawing.Size(88, 15);
+            this.lvlNombre.TabIndex = 0;
+            this.lvlNombre.Text = "Nombre perfil: ";
             // 
             // txtNombrePerfil
             // 
+            this.txtNombrePerfil.AccessibleDescription = "";
             this.txtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtNombrePerfil.Location = new System.Drawing.Point(111, 22);
+            this.txtNombrePerfil.Location = new System.Drawing.Point(111, 25);
             this.txtNombrePerfil.Name = "txtNombrePerfil";
             this.txtNombrePerfil.Size = new System.Drawing.Size(206, 21);
             this.txtNombrePerfil.TabIndex = 1;
+            this.txtNombrePerfil.Tag = "";
             // 
             // btnConfirmar
             // 
@@ -74,7 +76,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btn_cancelar);
             // 
             // txtNuevoNombre
             // 
@@ -106,9 +108,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtNombrePerfil);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lvlNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximumSize = new System.Drawing.Size(345, 195);
+            this.MinimumSize = new System.Drawing.Size(345, 195);
             this.Name = "frmCampoPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmCampoPerfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,7 +122,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lvlNombre;
         private System.Windows.Forms.TextBox txtNombrePerfil;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button button1;

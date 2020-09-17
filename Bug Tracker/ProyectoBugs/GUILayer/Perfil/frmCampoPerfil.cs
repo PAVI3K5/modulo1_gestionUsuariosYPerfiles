@@ -47,6 +47,9 @@ namespace ProyectoBugs.GUILayer
                 case FormMode.nuevo:
                     {
                         this.Text = "Nuevo Usuario";
+                        txtNombrePerfil.Location = new Point(111,56) ;
+                        lvlNombre.Location = new Point(12,56);
+
                         break;
                     }
 
@@ -112,9 +115,10 @@ namespace ProyectoBugs.GUILayer
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_cancelar(object sender, EventArgs e)
         {
             this.Close();
+
         }
     }
 }

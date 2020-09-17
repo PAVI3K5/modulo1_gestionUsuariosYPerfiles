@@ -33,7 +33,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPerfiles
@@ -45,13 +47,13 @@
             this.dgvPerfiles.Name = "dgvPerfiles";
             this.dgvPerfiles.ReadOnly = true;
             this.dgvPerfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerfiles.Size = new System.Drawing.Size(292, 131);
+            this.dgvPerfiles.Size = new System.Drawing.Size(345, 131);
             this.dgvPerfiles.TabIndex = 0;
             // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnNuevo.Location = new System.Drawing.Point(12, 180);
+            this.btnNuevo.Location = new System.Drawing.Point(0, 161);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 24);
             this.btnNuevo.TabIndex = 3;
@@ -62,7 +64,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnEditar.Location = new System.Drawing.Point(92, 180);
+            this.btnEditar.Location = new System.Drawing.Point(80, 161);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 24);
             this.btnEditar.TabIndex = 4;
@@ -73,7 +75,7 @@
             // BtnEliminar
             // 
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.BtnEliminar.Location = new System.Drawing.Point(172, 180);
+            this.BtnEliminar.Location = new System.Drawing.Point(160, 161);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(64, 24);
             this.BtnEliminar.TabIndex = 5;
@@ -84,7 +86,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVolver.Location = new System.Drawing.Point(286, 180);
+            this.btnVolver.Location = new System.Drawing.Point(275, 161);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(64, 24);
             this.btnVolver.TabIndex = 7;
@@ -92,20 +94,34 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.BtnEliminar);
+            this.groupBox1.Controls.Add(this.btnVolver);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(345, 191);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Perfiles";
+            // 
             // frmPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 216);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvPerfiles);
+            this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(385, 255);
+            this.MinimumSize = new System.Drawing.Size(385, 255);
             this.Name = "frmPerfiles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Perfiles";
             this.Load += new System.EventHandler(this.frmPerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +133,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
