@@ -25,5 +25,9 @@ namespace ProyectoBugs.BusinessLayer
         {
             return oPerfilDao.Create(oPerfil);
         }
+        public bool borrarPerfil(Perfil oPerfil)
+        {
+            return oPerfilDao.delete(oPerfil);
+        }
     }
 }

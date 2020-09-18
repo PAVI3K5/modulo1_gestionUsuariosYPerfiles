@@ -18,7 +18,7 @@ namespace BugTacker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPerfiles());
+            Application.Run(new frmPrincipal());
         }
     }
 }

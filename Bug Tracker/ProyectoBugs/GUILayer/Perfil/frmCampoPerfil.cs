@@ -24,7 +24,7 @@ namespace ProyectoBugs.GUILayer
             InitializeComponent();
 
             oPerfilService = new PerfilService();
-            ;
+            
         }
 
         public enum FormMode
@@ -89,16 +89,24 @@ namespace ProyectoBugs.GUILayer
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            var oPerfil = new Perfil();
             switch (formMode)
             {
                 case FormMode.nuevo:
                     {
-                        var oPerfil = new Perfil();
+                        
                         oPerfil.Nombre = txtNombrePerfil.Text;
-                        if (oPerfilService.CrearPerfil(oPerfil))
+
+                        if (!String.IsNullOrEmpty(txtNombrePerfil.Text))
                         {
-                            MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                            if (oPerfilService.CrearPerfil(oPerfil))
+                            {
+                                MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                        }
+                        else {
+                            MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
                         }
                         break;
                     }
@@ -110,15 +118,26 @@ namespace ProyectoBugs.GUILayer
 
                 case FormMode.eliminar:
                     {
+
+                        oPerfil = oPerfilSelected;
+                        if (MessageBox.Show("Seguro que desea eliminar el perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            oPerfilService.borrarPerfil(oPerfil);
+                            MessageBox.Show("Perfil eliminado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Ha ocurrido un error al intentar borrar el perfil!", "Error");
+                        }
+                    }
                         break;
                     }
             }
         }
 
-        private void btn_cancelar(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
+        
     }
-}
+
+

@@ -97,5 +97,10 @@ namespace ProyectoBugs.GUILayer
             campoPerfil.ShowDialog();
             CargarGrilla();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
