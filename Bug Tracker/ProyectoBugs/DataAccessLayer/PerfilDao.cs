@@ -29,7 +29,8 @@ namespace ProyectoBugs.DataAccessLayer
 
         internal bool Create(Perfil oPerfil)
         {
-            string query = "DECLARE @idPerfil int;";
+            //Si el registro no existe en la tabla, lo creo.
+            string query = "IF NOT EXISTS (select 1 from Perfiles Where nombre = '"+oPerfil.Nombre+"')";
             query += "Insert INTO Perfiles (nombre, borrado) VALUES ('" + oPerfil.Nombre + "', 0);";
 
             return DBHelper.GetDBHelper().EjecutarSQL(query) > 0;

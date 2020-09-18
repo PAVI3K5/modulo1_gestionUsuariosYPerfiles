@@ -92,26 +92,36 @@ namespace ProyectoBugs.GUILayer
             var oPerfil = new Perfil();
             switch (formMode)
             {
-               case FormMode.nuevo:
+                case FormMode.nuevo:
                     {
 
                         oPerfil.Nombre = txtNombrePerfil.Text;
 
                         if (!String.IsNullOrEmpty(txtNombrePerfil.Text))
                         {
-
-                            oPerfilService.CrearPerfil(oPerfil);
-                            MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                                                   
-
-
-                            else {
-                                MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
+                            
+                            if (oPerfilService.CrearPerfil(oPerfil) == true)
+                            {
+                                MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
                             }
-                            break;
+                            else
+                            {
+                                MessageBox.Show("El perfil ya existe!");
+                                this.Close();
+
+                            }
                         }
+
+
+                        else
+                        {
+                            MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
+                        }
+
+                        break;
+                    }
+                        
                     
 
                 case FormMode.actualizar:
