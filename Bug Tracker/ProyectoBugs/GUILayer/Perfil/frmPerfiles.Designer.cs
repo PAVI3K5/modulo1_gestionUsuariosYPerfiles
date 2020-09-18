@@ -49,6 +49,7 @@
             this.dgvPerfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPerfiles.Size = new System.Drawing.Size(345, 131);
             this.dgvPerfiles.TabIndex = 0;
+            this.dgvPerfiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfiles_CellContentClick);
             // 
             // btnNuevo
             // 

@@ -92,27 +92,54 @@ namespace ProyectoBugs.GUILayer
             var oPerfil = new Perfil();
             switch (formMode)
             {
-                case FormMode.nuevo:
+               case FormMode.nuevo:
                     {
-                        
+
                         oPerfil.Nombre = txtNombrePerfil.Text;
 
                         if (!String.IsNullOrEmpty(txtNombrePerfil.Text))
                         {
-                            if (oPerfilService.CrearPerfil(oPerfil))
-                            {
-                                MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
+
+                            oPerfilService.CrearPerfil(oPerfil);
+                            MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                                                   
+
+
+                            else {
+                                MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
                             }
+                            break;
                         }
-                        else {
-                            MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
-                        }
-                        break;
-                    }
+                    
 
                 case FormMode.actualizar:
                     {
+
+                        oPerfil.Nombre = txtNuevoNombre.Text;
+                        oPerfil.IdPerfil = oPerfilSelected.IdPerfil;
+
+                        
+
+                        if (txtNuevoNombre.Text !="")
+                        {
+                            if (MessageBox.Show("Seguro que desea modificar e" +
+                                "l perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                oPerfilService.actualizarPerfil(oPerfil);
+                                MessageBox.Show("Perfil modificado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
+
+                            }
+                            else {
+                                MessageBox.Show("El nombre de perfil no debe estar vacío!");
+
+
+                        }
+                        }
+
                         break;
                     }
 

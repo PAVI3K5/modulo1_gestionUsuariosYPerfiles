@@ -1,5 +1,6 @@
 ﻿using BugTacker.Entities;
 using ProyectoBugs.DataAccessLayer;
+using ProyectoBugs.GUILayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,5 +30,11 @@ namespace ProyectoBugs.BusinessLayer
         {
             return oPerfilDao.delete(oPerfil);
         }
+        public bool actualizarPerfil(Perfil oPerfil)
+        {
+            return oPerfilDao.update(oPerfil);
+        
+        }
+       
     }
 }

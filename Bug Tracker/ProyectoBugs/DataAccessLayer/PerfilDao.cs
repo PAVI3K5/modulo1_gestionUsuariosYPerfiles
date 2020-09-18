@@ -42,7 +42,17 @@ namespace ProyectoBugs.DataAccessLayer
 
         }
 
+        public bool update(Perfil oPerfil)
+        {
+
+            string query = "UPDATE Perfiles SET nombre ='"+ oPerfil.Nombre+"' where id_perfil=" +oPerfil.IdPerfil;
+            return DBHelper.GetDBHelper().EjecutarSQL(query) != 0;
+
+        }
+
        
+
+
 
         private Perfil MappingPerfil(DataRow row)
         {

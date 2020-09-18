@@ -102,5 +102,10 @@ namespace ProyectoBugs.GUILayer
         {
 
         }
+
+        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
