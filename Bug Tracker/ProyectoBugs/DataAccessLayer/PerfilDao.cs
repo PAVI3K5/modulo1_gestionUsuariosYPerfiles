@@ -35,6 +35,7 @@ namespace ProyectoBugs.DataAccessLayer
 
             return DBHelper.GetDBHelper().EjecutarSQL(query) > 0;
         }
+
         public bool delete(Perfil oPerfil)
         {
             //IMPORTANTE: en vez de hacer un delete, hacemos UPDATE porque es BORRADO LÓGICO 

@@ -37,10 +37,6 @@ namespace BugTacker.GUILayer
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void asistenciaUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,6 +49,11 @@ namespace BugTacker.GUILayer
         {
             frmPerfiles perfiles = new frmPerfiles();
             perfiles.ShowDialog();
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

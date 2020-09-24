@@ -51,6 +51,7 @@
             this.txtNombrePerfil.AccessibleDescription = "";
             this.txtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNombrePerfil.Location = new System.Drawing.Point(111, 25);
+            this.txtNombrePerfil.MaxLength = 40;
             this.txtNombrePerfil.Name = "txtNombrePerfil";
             this.txtNombrePerfil.Size = new System.Drawing.Size(206, 21);
             this.txtNombrePerfil.TabIndex = 1;
@@ -82,6 +83,7 @@
             // 
             this.txtNuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNuevoNombre.Location = new System.Drawing.Point(111, 68);
+            this.txtNuevoNombre.MaxLength = 40;
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(206, 21);
             this.txtNuevoNombre.TabIndex = 5;
