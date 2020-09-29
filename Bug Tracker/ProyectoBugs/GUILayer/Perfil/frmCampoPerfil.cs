@@ -134,8 +134,8 @@ namespace ProyectoBugs.GUILayer
 
                         if (txtNuevoNombre.Text !="")
                         {
-                            if (MessageBox.Show("Seguro que desea modificar e" +
-                                "l perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                            if (MessageBox.Show("Seguro que desea modificar el" +
+                                "perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                             {
                                 oPerfilService.actualizarPerfil(oPerfil);
                                 MessageBox.Show("Perfil modificado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

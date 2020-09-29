@@ -1,5 +1,6 @@
 ﻿using BugTacker.Entities;
 using ProyectoBugs.BusinessLayer;
+using ProyectoBugs.GUILayer.Princ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,7 @@ namespace ProyectoBugs.GUILayer
         private void frmPerfiles_Load(object sender, EventArgs e)
         {
             CargarGrilla();
+            Cargartema();
         }
 
         public void CargarGrilla()
@@ -50,13 +52,15 @@ namespace ProyectoBugs.GUILayer
             dgvPerfiles.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvPerfiles.Columns[0].Name = "ID";
+            dgvPerfiles.Columns[0].Name = "    ID";
+            dgvPerfiles.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPerfiles.Columns[0].DataPropertyName = "IdPerfil";
+            dgvPerfiles.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             // Definimos el ancho de la columna.
 
+            dgvPerfiles.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPerfiles.Columns[1].Name = "Nombre Perfil";
             dgvPerfiles.Columns[1].DataPropertyName = "Nombre";
-            dgvPerfiles.Columns[1].Width = 150;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvPerfiles.AutoResizeColumnHeadersHeight();
@@ -71,11 +75,6 @@ namespace ProyectoBugs.GUILayer
             frmCampoPerfil campoPerfil = new frmCampoPerfil();
             campoPerfil.ShowDialog();
             CargarGrilla();
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -98,14 +97,18 @@ namespace ProyectoBugs.GUILayer
             CargarGrilla();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void Cargartema()
         {
-
-        }
-
-        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ColorTemas.ColorPrimario;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ColorTemas.ColorSecundario;
+                }
+            }
         }
     }
 }

@@ -84,3 +84,4 @@ C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug
 C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
 C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
 C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
+D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Princ.frmPrincipalMenu.resources
