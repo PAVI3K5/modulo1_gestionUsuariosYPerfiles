@@ -42,7 +42,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitulo.SuspendLayout();
@@ -51,7 +51,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.lblUsuario);
             this.panelMenu.Controls.Add(this.btnPermisos);
             this.panelMenu.Controls.Add(this.btnFormularios);
             this.panelMenu.Controls.Add(this.btnPerfiles);
@@ -235,17 +235,16 @@
             this.panelPrincipal.Size = new System.Drawing.Size(713, 493);
             this.panelPrincipal.TabIndex = 2;
             // 
-            // button1
+            // lblUsuario
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(58, 517);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(0, 553);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(220, 20);
+            this.lblUsuario.TabIndex = 5;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPrincipalMenu
             // 
@@ -259,6 +258,7 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmPrincipalMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmPrincipalMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
@@ -282,6 +282,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

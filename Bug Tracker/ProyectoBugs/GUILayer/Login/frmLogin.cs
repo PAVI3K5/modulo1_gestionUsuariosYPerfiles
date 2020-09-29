@@ -62,8 +62,10 @@ namespace BugTacker.GUILayer
             }
             else
             {
+                UsuarioLogueado = usr.NombreUsuario;
                 this.Close();
             }
+
 
         }
 

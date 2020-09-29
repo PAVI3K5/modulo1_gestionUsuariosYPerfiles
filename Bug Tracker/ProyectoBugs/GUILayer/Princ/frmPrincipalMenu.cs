@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BugTacker.GUILayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,8 @@ namespace ProyectoBugs.GUILayer.Princ
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
+        //Esto lo vi en internet y lo implementamos para poder desplazar el form desde el panel de arriba
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -186,5 +189,12 @@ namespace ProyectoBugs.GUILayer.Princ
                 this.WindowState = FormWindowState.Normal;
         }
 
+        private void frmPrincipalMenu_Load(object sender, EventArgs e)
+        {
+            frmLogin formularioLogin = new frmLogin();
+            formularioLogin.ShowDialog();
+            string usuarioActual = formularioLogin.UsuarioLogueado;
+            lblUsuario.Text = usuarioActual;
+        }
     }
 }
