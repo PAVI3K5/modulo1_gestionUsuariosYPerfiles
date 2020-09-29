@@ -15,7 +15,22 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT id_perfil, nombre from Perfiles where borrado=0";
+            var strSql = "SELECT id_perfil, nombre from Perfiles where borrado=0 order by nombre";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoPerfiles.Add(MappingPerfil(row));
+            }
+
+            return listadoPerfiles;
+        }
+        public IList<Perfil> filtrarPerfiles(string filtro)
+        {
+            List<Perfil> listadoPerfiles = new List<Perfil>();
+
+            var strSql = "SELECT  id_perfil,nombre from Perfiles where borrado=0 and NOMBRE LIKE '" + filtro + "%' ";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 

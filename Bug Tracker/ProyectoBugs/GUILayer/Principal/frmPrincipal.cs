@@ -190,5 +190,10 @@ namespace ProyectoBugs.GUILayer.Princ
             string usuarioActual = formularioLogin.UsuarioLogueado;
             lblUsuario.Text = usuarioActual;
         }
+
+        private void panelTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

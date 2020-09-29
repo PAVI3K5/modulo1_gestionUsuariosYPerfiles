@@ -34,11 +34,15 @@ namespace ProyectoBugs.GUILayer
         {
             dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
         }
+        public void filtrarGrilla()
+        {
+            dgvPerfiles.DataSource = oPerfilService.buscarPerfil(txtBuscar.Text);
+        }
 
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvPerfiles.ColumnCount = 2;
+            dgvPerfiles.ColumnCount = 1;
             dgvPerfiles.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -51,16 +55,14 @@ namespace ProyectoBugs.GUILayer
             columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
             dgvPerfiles.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
-            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvPerfiles.Columns[0].Name = "    ID";
-            dgvPerfiles.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvPerfiles.Columns[0].DataPropertyName = "IdPerfil";
-            dgvPerfiles.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+
             // Definimos el ancho de la columna.
 
-            dgvPerfiles.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvPerfiles.Columns[1].Name = "Nombre Perfil";
-            dgvPerfiles.Columns[1].DataPropertyName = "Nombre";
+            dgvPerfiles.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvPerfiles.Columns[0].Name = "Nombre Perfil";
+            dgvPerfiles.Columns[0].DataPropertyName = "Nombre";
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvPerfiles.AutoResizeColumnHeadersHeight();
@@ -108,6 +110,23 @@ namespace ProyectoBugs.GUILayer
                     btn.ForeColor = Color.White;
                     btn.FlatAppearance.BorderColor = ColorTemas.ColorSecundario;
                 }
+            }
+        }
+
+        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                CargarGrilla();
+            }
+            else
+            {
+                filtrarGrilla();
             }
         }
     }

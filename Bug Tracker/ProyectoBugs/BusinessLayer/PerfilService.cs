@@ -35,6 +35,10 @@ namespace ProyectoBugs.BusinessLayer
             return oPerfilDao.update(oPerfil);
         
         }
-       
+        public IList<Perfil> buscarPerfil(string filtro)
+        {
+            return oPerfilDao.filtrarPerfiles(filtro);
+        }
+
     }
 }

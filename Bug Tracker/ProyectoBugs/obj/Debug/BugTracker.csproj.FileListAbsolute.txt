@@ -84,3 +84,16 @@ C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug
 C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
 C:\Users\Sergi\OneDrive\Escritorio\formMode\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Princ.frmPrincipalMenu.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe.config
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.pdb
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csprojAssemblyReference.cache
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmCampoPerfil.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmPerfiles.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Princ.frmPrincipalMenu.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
+C:\Users\Sergi\OneDrive\Escritorio\pav proyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
