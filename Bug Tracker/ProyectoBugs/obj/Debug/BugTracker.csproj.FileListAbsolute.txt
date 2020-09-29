@@ -65,7 +65,6 @@ D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modul
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmCampoPerfil.resources
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmPerfiles.resources
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
-D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmPrincipal.resources
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
 D:\FACULTAD\2020 PANDEMIA CHALLENGE\Programacion Aplicaciones Visuales\TPI\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache

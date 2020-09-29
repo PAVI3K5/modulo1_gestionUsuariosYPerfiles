@@ -71,18 +71,12 @@
     <Compile Include="GUILayer\Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmPrincipal.cs">
+    <Compile Include="GUILayer\Principal\ColorTemas.cs" />
+    <Compile Include="GUILayer\Principal\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmPrincipal.Designer.cs">
+    <Compile Include="GUILayer\Principal\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUILayer\Princ\ColorTemas.cs" />
-    <Compile Include="GUILayer\Princ\frmPrincipalMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\Princ\frmPrincipalMenu.Designer.cs">
-      <DependentUpon>frmPrincipalMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,11 +89,8 @@
     <EmbeddedResource Include="GUILayer\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
+    <EmbeddedResource Include="GUILayer\Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Princ\frmPrincipalMenu.resx">
-      <DependentUpon>frmPrincipalMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
