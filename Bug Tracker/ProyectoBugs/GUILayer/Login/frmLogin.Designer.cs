@@ -35,6 +35,10 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblMensajeError = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -104,14 +108,39 @@
             this.lblMensajeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblMensajeError.Image = global::ProyectoBugs.Properties.Resources.iconfinder_exclamation_mark_triangle_sign_caution_3643775__1_;
             this.lblMensajeError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMensajeError.Location = new System.Drawing.Point(22, 114);
+            this.lblMensajeError.Location = new System.Drawing.Point(12, 16);
             this.lblMensajeError.Name = "lblMensajeError";
             this.lblMensajeError.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblMensajeError.Size = new System.Drawing.Size(52, 18);
             this.lblMensajeError.TabIndex = 6;
             this.lblMensajeError.Text = "           ";
-            this.lblMensajeError.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMensajeError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMensajeError.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(354, 101);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 149);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(354, 52);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblMensajeError);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 101);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(354, 48);
+            this.panel3.TabIndex = 9;
             // 
             // frmLogin
             // 
@@ -119,15 +148,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(354, 201);
-            this.Controls.Add(this.lblMensajeError);
+            this.ControlBox = false;
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(370, 240);
             this.MinimizeBox = false;
@@ -136,6 +168,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +184,9 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblMensajeError;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

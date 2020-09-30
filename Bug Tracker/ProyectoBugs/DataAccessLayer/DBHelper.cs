@@ -151,6 +151,40 @@ namespace BugTacker.DataAccessLayer
             }
         }
 
+        public DataTable ConsultaSPConParametros(string nameSP, Dictionary<string, object> prs)
+        {
+            SqlConnection cnn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                cnn.ConnectionString = string_conexion;
+                cnn.Open();
+                cmd.Connection = cnn;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = nameSP;
+
+                //Agregamos a la colección de parámetros del comando los filtros recibidos
+                foreach (var item in prs)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
+
+                tabla.Load(cmd.ExecuteReader());
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                CloseConnection(cnn);
+            }
+        }
+
         private void CloseConnection(SqlConnection cnn)
         {
             if (cnn.State == ConnectionState.Open)
