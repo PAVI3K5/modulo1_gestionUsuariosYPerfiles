@@ -21,6 +21,10 @@ namespace ProyectoBugs.BusinessLayer
         {
             return oPerfilDao.GetAll();
         }
+        public IList<Perfil> recuperarTodosConBorrados()
+        {
+            return oPerfilDao.GetAllWithErased();
+        }
 
         internal bool CrearPerfil(Perfil oPerfil)
         {
@@ -35,10 +39,16 @@ namespace ProyectoBugs.BusinessLayer
             return oPerfilDao.update(oPerfil);
         
         }
+
+
         public IList<Perfil> buscarPerfil(string filtro)
         {
             return oPerfilDao.filtrarPerfiles(filtro);
         }
 
+        public IList<Perfil> buscarPerfilConBorrados(string filtro)
+        {
+            return oPerfilDao.filtrarPerfilesConBorrados(filtro);
+        }
     }
 }

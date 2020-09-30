@@ -11,38 +11,26 @@ namespace ProyectoBugs.GUILayer.Princ
     {
         //Campos
         private Button botonActual;
-        private Random random;
-        private int tempIndex;
+        private int tempIndex = 0;
         private Form frmActivo;
 
         //Constructor
         public frmPrincipalMenu()
         {
             InitializeComponent();
-            random = new Random();
             btnBack.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        //Esto lo vi en internet y lo implementamos para poder desplazar el form desde el panel de arriba
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         //Metodos
         private Color SeleccionarColorDelTema()
         {
-            int index = random.Next(ColorTemas.ColorList.Count);
-            while (tempIndex == index)
-            {
-                index = random.Next(ColorTemas.ColorList.Count);
-
-            }
-            tempIndex = index;
-            string color = ColorTemas.ColorList[index];
+            tempIndex += 1;
+            if (tempIndex >= ColorTemas.ColorList.Count)
+                tempIndex = 0;
+            string color = ColorTemas.ColorList[tempIndex];
             return ColorTranslator.FromHtml(color);
         }
 
@@ -60,9 +48,9 @@ namespace ProyectoBugs.GUILayer.Princ
                     botonActual.ForeColor = Color.White;
                     botonActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitulo.BackColor = color;
-                    panelLogo.BackColor = ColorTemas.CambiarBrilloColor(color, -0.5);
+                    panelLogo.BackColor = ColorTemas.CambiarOpacidadColor(color, -0.5);
                     ColorTemas.ColorPrimario = color;
-                    ColorTemas.ColorSecundario = ColorTemas.CambiarBrilloColor(color, -0.5);
+                    ColorTemas.ColorSecundario = ColorTemas.CambiarOpacidadColor(color, -0.5);
                 }
             }
         }
@@ -145,6 +133,7 @@ namespace ProyectoBugs.GUILayer.Princ
             btnBack.Visible = false;
         }
 
+
         //Mover por la pantalla
         private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -157,6 +146,12 @@ namespace ProyectoBugs.GUILayer.Princ
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        //Esto lo vimos en internet y lo implementamos para poder desplazar el form desde el panel de arriba
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
 
         //Creamos la accion de salir, minimizar y maximizar
         private void btnSalir_Click(object sender, EventArgs e)
@@ -189,6 +184,7 @@ namespace ProyectoBugs.GUILayer.Princ
             formularioLogin.ShowDialog();
             string usuarioActual = formularioLogin.UsuarioLogueado;
             lblUsuario.Text = usuarioActual;
+            lblUsuario.Text = lblUsuario.Text.ToUpper();
         }
     }
 }

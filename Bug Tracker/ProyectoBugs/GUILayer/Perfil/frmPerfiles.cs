@@ -32,11 +32,17 @@ namespace ProyectoBugs.GUILayer
 
         public void CargarGrilla()
         {
-            dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
+            if (cbxMostrarBorrados.Checked)
+                dgvPerfiles.DataSource = oPerfilService.recuperarTodosConBorrados();
+            else
+                dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
         }
         public void filtrarGrilla()
         {
-            dgvPerfiles.DataSource = oPerfilService.buscarPerfil(txtBuscar.Text);
+            if (cbxMostrarBorrados.Checked)
+                dgvPerfiles.DataSource = oPerfilService.buscarPerfilConBorrados(txtBuscar.Text);
+            else
+                dgvPerfiles.DataSource = oPerfilService.buscarPerfil(txtBuscar.Text);
         }
 
         private void InitializeDataGridView()
@@ -121,13 +127,17 @@ namespace ProyectoBugs.GUILayer
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscar.Text == "")
-            {
                 CargarGrilla();
-            }
             else
-            {
                 filtrarGrilla();
-            }
+        }
+
+        private void cbxMostrarBorrados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")            
+                CargarGrilla();            
+            else           
+                filtrarGrilla();
         }
     }
 }

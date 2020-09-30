@@ -26,11 +26,44 @@ namespace ProyectoBugs.DataAccessLayer
 
             return listadoPerfiles;
         }
+
+        public IList<Perfil> GetAllWithErased()
+        {
+            List<Perfil> listadoPerfiles = new List<Perfil>();
+
+            var strSql = "SELECT id_perfil, nombre from Perfiles order by nombre";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoPerfiles.Add(MappingPerfil(row));
+            }
+
+            return listadoPerfiles;
+        }
+
         public IList<Perfil> filtrarPerfiles(string filtro)
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
             var strSql = "SELECT  id_perfil,nombre from Perfiles where borrado=0 and NOMBRE LIKE '" + filtro + "%' ";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoPerfiles.Add(MappingPerfil(row));
+            }
+
+            return listadoPerfiles;
+        }
+
+        internal IList<Perfil> filtrarPerfilesConBorrados(object filtro)
+        {
+            List<Perfil> listadoPerfiles = new List<Perfil>();
+
+            var strSql = "SELECT  id_perfil,nombre from Perfiles where NOMBRE LIKE '" + filtro + "%' ";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -76,7 +109,7 @@ namespace ProyectoBugs.DataAccessLayer
             Perfil oPerfil = new Perfil
             {
                 IdPerfil = Convert.ToInt32(row["id_perfil"].ToString()),
-                Nombre = row["nombre"].ToString(),
+                Nombre = row["nombre"].ToString()
             };
 
             return oPerfil;
