@@ -15,7 +15,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT id_perfil, nombre from Perfiles where borrado=0 order by nombre";
+            var strSql = "SELECT id_perfil, nombre, borrado from Perfiles where borrado=0 order by nombre";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -31,7 +31,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT id_perfil, nombre from Perfiles order by nombre";
+            var strSql = "SELECT id_perfil, nombre, borrado from Perfiles order by nombre";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -47,7 +47,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT  id_perfil,nombre from Perfiles where borrado=0 and NOMBRE LIKE '" + filtro + "%' ";
+            var strSql = "SELECT  id_perfil, nombre, borrado from Perfiles where borrado=0 and NOMBRE LIKE '" + filtro + "%' ";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -63,7 +63,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT  id_perfil,nombre from Perfiles where NOMBRE LIKE '" + filtro + "%' ";
+            var strSql = "SELECT  id_perfil, nombre, borrado from Perfiles where NOMBRE LIKE '" + filtro + "%' ";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -109,7 +109,8 @@ namespace ProyectoBugs.DataAccessLayer
             Perfil oPerfil = new Perfil
             {
                 IdPerfil = Convert.ToInt32(row["id_perfil"].ToString()),
-                Nombre = row["nombre"].ToString()
+                Nombre = row["nombre"].ToString(),
+                Borrado = Convert.ToBoolean(row["borrado"].ToString())
             };
 
             return oPerfil;

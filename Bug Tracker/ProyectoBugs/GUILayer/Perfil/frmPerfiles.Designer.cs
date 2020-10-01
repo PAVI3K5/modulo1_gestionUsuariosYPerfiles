@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPerfiles = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbxMostrarBorrados = new System.Windows.Forms.CheckBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.cbxMostrarBorrados = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,6 +76,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(105, 354);
             this.panel2.TabIndex = 2;
+            // 
+            // cbxMostrarBorrados
+            // 
+            this.cbxMostrarBorrados.AutoSize = true;
+            this.cbxMostrarBorrados.Location = new System.Drawing.Point(3, 35);
+            this.cbxMostrarBorrados.Name = "cbxMostrarBorrados";
+            this.cbxMostrarBorrados.Size = new System.Drawing.Size(106, 17);
+            this.cbxMostrarBorrados.TabIndex = 9;
+            this.cbxMostrarBorrados.Text = "Mostrar Borrados";
+            this.cbxMostrarBorrados.UseVisualStyleBackColor = true;
+            this.cbxMostrarBorrados.CheckedChanged += new System.EventHandler(this.cbxMostrarBorrados_CheckedChanged);
             // 
             // btnNuevo
             // 
@@ -151,17 +162,6 @@
             this.lblBuscar.Size = new System.Drawing.Size(63, 20);
             this.lblBuscar.TabIndex = 4;
             this.lblBuscar.Text = "Buscar:";
-            // 
-            // cbxMostrarBorrados
-            // 
-            this.cbxMostrarBorrados.AutoSize = true;
-            this.cbxMostrarBorrados.Location = new System.Drawing.Point(3, 35);
-            this.cbxMostrarBorrados.Name = "cbxMostrarBorrados";
-            this.cbxMostrarBorrados.Size = new System.Drawing.Size(106, 17);
-            this.cbxMostrarBorrados.TabIndex = 9;
-            this.cbxMostrarBorrados.Text = "Mostrar Borrados";
-            this.cbxMostrarBorrados.UseVisualStyleBackColor = true;
-            this.cbxMostrarBorrados.CheckedChanged += new System.EventHandler(this.cbxMostrarBorrados_CheckedChanged);
             // 
             // frmPerfiles
             // 

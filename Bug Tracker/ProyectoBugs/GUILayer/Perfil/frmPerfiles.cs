@@ -33,14 +33,20 @@ namespace ProyectoBugs.GUILayer
         public void CargarGrilla()
         {
             if (cbxMostrarBorrados.Checked)
+            {
                 dgvPerfiles.DataSource = oPerfilService.recuperarTodosConBorrados();
+                CambiarColorFilasBorradoas(dgvPerfiles);
+            }
             else
                 dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
         }
         public void filtrarGrilla()
         {
             if (cbxMostrarBorrados.Checked)
+            {
                 dgvPerfiles.DataSource = oPerfilService.buscarPerfilConBorrados(txtBuscar.Text);
+                CambiarColorFilasBorradoas(dgvPerfiles);
+            }
             else
                 dgvPerfiles.DataSource = oPerfilService.buscarPerfil(txtBuscar.Text);
         }
@@ -48,7 +54,7 @@ namespace ProyectoBugs.GUILayer
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvPerfiles.ColumnCount = 1;
+            dgvPerfiles.ColumnCount = 3;
             dgvPerfiles.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -56,19 +62,28 @@ namespace ProyectoBugs.GUILayer
 
             // Cambia el estilo de la cabecera de la grilla.
             DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
-
             columnHeaderStyle.BackColor = Color.Beige;
             columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
             dgvPerfiles.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
-
-
+            //Alternamos color filas
+            dgvPerfiles.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvPerfiles.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
 
             // Definimos el ancho de la columna.
+            dgvPerfiles.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            dgvPerfiles.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvPerfiles.Columns[0].Name = "Nombre Perfil";
-            dgvPerfiles.Columns[0].DataPropertyName = "Nombre";
+            // Definimos las columnas.
+            dgvPerfiles.Columns[0].Name = "ID";
+            dgvPerfiles.Columns[0].DataPropertyName = "IdPerfil";
+            dgvPerfiles.Columns[1].Name = "Nombre Perfil";
+            dgvPerfiles.Columns[1].DataPropertyName = "Nombre";
+            dgvPerfiles.Columns[2].Name = "Borrado";
+            dgvPerfiles.Columns[2].DataPropertyName = "Borrado";
+
+            //Ocultamos columnas innecesarias.
+            dgvPerfiles.Columns[0].Visible = false;
+            dgvPerfiles.Columns[2].Visible = false;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvPerfiles.AutoResizeColumnHeadersHeight();
@@ -76,6 +91,8 @@ namespace ProyectoBugs.GUILayer
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvPerfiles.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -119,11 +136,6 @@ namespace ProyectoBugs.GUILayer
             }
         }
 
-        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscar.Text == "")
@@ -138,6 +150,13 @@ namespace ProyectoBugs.GUILayer
                 CargarGrilla();            
             else           
                 filtrarGrilla();
+        }
+
+        private void CambiarColorFilasBorradoas(DataGridView dgv)
+        {
+            foreach (DataGridViewRow row in dgv.Rows)
+                if (Convert.ToBoolean(row.Cells[2].Value) == true)
+                    row.DefaultCellStyle.BackColor = Color.Red;
         }
     }
 }
