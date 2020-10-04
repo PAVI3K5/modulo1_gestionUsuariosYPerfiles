@@ -15,9 +15,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT id_perfil, nombre, borrado from Perfiles where borrado=0 order by nombre";
-
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSP("SP_CONSULTAR_PERFILES");
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -31,9 +29,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT id_perfil, nombre, borrado from Perfiles order by nombre";
-
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSP("SP_CONSULTAR_PERFILES_CON_BORRADO");
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -47,9 +43,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT  id_perfil, nombre, borrado from Perfiles where borrado=0 and NOMBRE LIKE '" + filtro + "%' ";
-
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultarSPConParametros("FILTRAR_PERFILES_POR_NOMBRE", new object[] {filtro });
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -63,9 +57,7 @@ namespace ProyectoBugs.DataAccessLayer
         {
             List<Perfil> listadoPerfiles = new List<Perfil>();
 
-            var strSql = "SELECT  id_perfil, nombre, borrado from Perfiles where NOMBRE LIKE '" + filtro + "%' ";
-
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultarSPConParametros("FILTRAR_PERFILES_POR_NOMBRE_CON_BORRADOS", new object[] {filtro });
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {

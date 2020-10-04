@@ -40,7 +40,7 @@ namespace ProyectoBugs.GUILayer
             else
                 dgvPerfiles.DataSource = oPerfilService.recuperarTodos();
         }
-        public void filtrarGrilla()
+        public void FiltrarGrilla()
         {
             if (cbxMostrarBorrados.Checked)
             {
@@ -141,7 +141,7 @@ namespace ProyectoBugs.GUILayer
             if (txtBuscar.Text == "")
                 CargarGrilla();
             else
-                filtrarGrilla();
+                FiltrarGrilla();
         }
 
         private void cbxMostrarBorrados_CheckedChanged(object sender, EventArgs e)
@@ -149,7 +149,7 @@ namespace ProyectoBugs.GUILayer
             if (txtBuscar.Text == "")            
                 CargarGrilla();            
             else           
-                filtrarGrilla();
+                FiltrarGrilla();
         }
 
         private void CambiarColorFilasBorradoas(DataGridView dgv)

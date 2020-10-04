@@ -106,6 +106,31 @@ namespace BugTacker.DataAccessLayer
                 this.CloseConnection(cnn);
             }
         }
+        public DataTable ConsultaSP(string nameSP)
+        {
+            SqlConnection cnn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                cnn.ConnectionString = string_conexion;
+                cnn.Open();
+                cmd.Connection = cnn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = nameSP;
+                tabla.Load(cmd.ExecuteReader());
+                return tabla;
+            }
+            catch (SqlException ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                this.CloseConnection(cnn);
+            }
+        }
 
         /// Resumen:
         ///      Se utiliza para sentencias SQL del tipo “Select” con parámetros recibidos desde la interfaz
@@ -117,12 +142,13 @@ namespace BugTacker.DataAccessLayer
         ///          El error de conexión se produce:
         ///              a) durante la apertura de la conexión
         ///              b) durante la ejecución del comando.
-        public DataTable ConsultaSQLConParametros(string sqlStr, Dictionary<string, object> prs)
+        public DataTable ConsultarSQLConParametros(string sqlStr, Object[] prs)
         {
             SqlConnection cnn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
 
+            string n_param;
             try
             {
                 cnn.ConnectionString = string_conexion;
@@ -133,10 +159,13 @@ namespace BugTacker.DataAccessLayer
                 cmd.CommandText = sqlStr;
 
                 //Agregamos a la colección de parámetros del comando los filtros recibidos
-                foreach (var item in prs)
-                {
-                    cmd.Parameters.AddWithValue(item.Key, item.Value);
-                }
+                //IMPORTANTE: cada parametro deberá llamarse: param1, param2,.., paramN
+                for (int i = 0; i < prs.Length; i++)
+                    if (prs[i] != null)
+                    {
+                        n_param = "param" + Convert.ToString(i + 1);
+                        cmd.Parameters.AddWithValue(n_param, prs[i]);
+                    }
 
                 tabla.Load(cmd.ExecuteReader());
                 return tabla;
@@ -151,12 +180,13 @@ namespace BugTacker.DataAccessLayer
             }
         }
 
-        public DataTable ConsultaSPConParametros(string nameSP, Dictionary<string, object> prs)
+        public DataTable ConsultarSPConParametros(string nameSP, Object[] prs)
         {
             SqlConnection cnn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
 
+            string n_param;
             try
             {
                 cnn.ConnectionString = string_conexion;
@@ -167,10 +197,13 @@ namespace BugTacker.DataAccessLayer
                 cmd.CommandText = nameSP;
 
                 //Agregamos a la colección de parámetros del comando los filtros recibidos
-                foreach (var item in prs)
-                {
-                    cmd.Parameters.AddWithValue(item.Key, item.Value);
-                }
+                //IMPORTANTE: cada parametro deberá llamarse: param1, param2,.., paramN
+                for (int i = 0; i < prs.Length; i++)
+                    if (prs[i] != null)
+                    {
+                        n_param = "param" + Convert.ToString(i + 1);
+                        cmd.Parameters.AddWithValue(n_param, prs[i]);
+                    }
 
                 tabla.Load(cmd.ExecuteReader());
                 return tabla;
