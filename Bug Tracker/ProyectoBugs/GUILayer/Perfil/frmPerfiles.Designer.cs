@@ -36,9 +36,9 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.panel2.SuspendLayout();
@@ -133,6 +133,26 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // lblBuscar
+            // 
+            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblBuscar.Location = new System.Drawing.Point(3, 40);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(63, 20);
+            this.lblBuscar.TabIndex = 4;
+            this.lblBuscar.Text = "Buscar:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Location = new System.Drawing.Point(72, 42);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(520, 20);
+            this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtBuscar);
@@ -142,26 +162,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(697, 100);
             this.panel3.TabIndex = 10;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.Location = new System.Drawing.Point(223, 42);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(348, 20);
-            this.txtBuscar.TabIndex = 9;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblBuscar.Location = new System.Drawing.Point(147, 42);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(63, 20);
-            this.lblBuscar.TabIndex = 4;
-            this.lblBuscar.Text = "Buscar:";
             // 
             // frmPerfiles
             // 
@@ -191,10 +191,10 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvPerfiles;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox cbxMostrarBorrados;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblBuscar;
     }
 }

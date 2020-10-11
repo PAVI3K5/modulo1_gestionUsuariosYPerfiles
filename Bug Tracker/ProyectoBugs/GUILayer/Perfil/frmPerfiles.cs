@@ -78,6 +78,7 @@ namespace ProyectoBugs.GUILayer
             dgvPerfiles.Columns[0].DataPropertyName = "IdPerfil";
             dgvPerfiles.Columns[1].Name = "Nombre Perfil";
             dgvPerfiles.Columns[1].DataPropertyName = "Nombre";
+            dgvPerfiles.Columns[1].ReadOnly = true;
             dgvPerfiles.Columns[2].Name = "Borrado";
             dgvPerfiles.Columns[2].DataPropertyName = "Borrado";
 

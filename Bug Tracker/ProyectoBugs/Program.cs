@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTacker.GUILayer;
 using ProyectoBugs.GUILayer;
+using ProyectoBugs.GUILayer.Formularios;
 using ProyectoBugs.GUILayer.Princ;
 
 namespace BugTacker

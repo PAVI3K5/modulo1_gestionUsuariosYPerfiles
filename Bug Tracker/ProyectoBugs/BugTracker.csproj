@@ -46,13 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\FormularioService.cs" />
     <Compile Include="BusinessLayer\PerfilService.cs" />
     <Compile Include="BusinessLayer\UsuarioService.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
     <Compile Include="DataAccessLayer\PerfilDao.cs" />
+    <Compile Include="DataAccessLayer\FormularioDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
+    <Compile Include="Entities\Formulario.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="GUILayer\Permisos\frmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Permisos\frmPermisos.Designer.cs">
+      <DependentUpon>frmPermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\Perfil\frmCampoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUILayer\Permisos\frmPermisos.resx">
+      <DependentUpon>frmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Perfil\frmCampoPerfil.resx">
       <DependentUpon>frmCampoPerfil.cs</DependentUpon>
     </EmbeddedResource>

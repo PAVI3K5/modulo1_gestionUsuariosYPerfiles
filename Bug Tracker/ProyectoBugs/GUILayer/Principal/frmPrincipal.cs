@@ -1,4 +1,5 @@
 ﻿using BugTacker.GUILayer;
+using ProyectoBugs.GUILayer.Formularios;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -106,11 +107,7 @@ namespace ProyectoBugs.GUILayer.Princ
 
         private void btnPermisos_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender);
-            if (frmActivo != null)
-            {
-                frmActivo.Close();
-            }
+            AbrirFormulariosEnPanelPrincipal(new frmPermisos(), sender);
         }
 
         //Para volver a la pantalla principal
