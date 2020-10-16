@@ -111,3 +111,19 @@ C:\Users\Sergi\OneDrive\Escritorio\PruebaProyecto\modulo1_gestionUsuariosYPerfil
 C:\Users\Sergi\OneDrive\Escritorio\PruebaProyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
 C:\Users\Sergi\OneDrive\Escritorio\PruebaProyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
 C:\Users\Sergi\OneDrive\Escritorio\PruebaProyecto\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Formularios.frmPermisos.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe.config
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.exe
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\bin\Debug\ProyectoBugs.pdb
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csprojAssemblyReference.cache
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Formularios.frmPermisos.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmCampoPerfil.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmPerfiles.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTacker.GUILayer.frmLogin.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Princ.frmPrincipalMenu.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.Properties.Resources.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.GenerateResource.cache
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\BugTracker.csproj.CoreCompileInputs.cache
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.exe
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmFormularios.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmCampoFormulario.resources

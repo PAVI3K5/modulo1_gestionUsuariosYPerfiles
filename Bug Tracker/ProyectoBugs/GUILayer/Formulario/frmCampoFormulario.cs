@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace ProyectoBugs.GUILayer
 {
-    public partial class frmCampoPerfil : Form
+    public partial class frmCampoFormulario : Form
     {
         private FormMode formMode = FormMode.nuevo;
         
-        private Perfil oPerfilSelected;
-        private PerfilService oPerfilService;
+        private Formulario oFormularioSelected;
+        private FormularioService oFormularioService;
 
-        public frmCampoPerfil()
+        public frmCampoFormulario()
         {
             InitializeComponent();
 
-            oPerfilService = new PerfilService();
+            oFormularioService = new FormularioService();
             
         }
 
@@ -40,14 +40,14 @@ namespace ProyectoBugs.GUILayer
 
         }
 
-        private void frmCampoPerfil_Load(object sender, EventArgs e)
+        private void frmCampoFormulario_Load(object sender, EventArgs e)
         {
             switch (formMode)
             {
                 case FormMode.nuevo:
                     {
-                        this.Text = "Nuevo Perfil";
-                        txtNombrePerfil.Location = new Point(111,56) ;
+                        this.Text = "Nuevo Formulario";
+                        txtNombreFormulario.Location = new Point(111,56) ;
                         lvlNombre.Location = new Point(12,56);
 
                         break;
@@ -55,9 +55,9 @@ namespace ProyectoBugs.GUILayer
 
                 case FormMode.actualizar:
                     {
-                        this.Text = "Actualizar Perfil";
+                        this.Text = "Actualizar Formulario";
                         MostrarDatos();
-                        txtNombrePerfil.Enabled = false;
+                        txtNombreFormulario.Enabled = false;
                         lvlCambioNombre.Visible = true;
                         txtNuevoNombre.Visible = true;
                         break;
@@ -65,49 +65,49 @@ namespace ProyectoBugs.GUILayer
 
                 case FormMode.eliminar:
                     {
-                        this.Text = "Eliminar Perfil";
+                        this.Text = "Eliminar Formulario";
                         MostrarDatos();
-                        txtNombrePerfil.Enabled = false;
+                        txtNombreFormulario.Enabled = false;
                         break;
                     }
             }
         }
 
-        public void InicializarFormulario(FormMode op, Perfil perfilSelected)
+        public void InicializarFormulario(FormMode op, Formulario formularioSelected)
         {
             formMode = op;
-            oPerfilSelected = perfilSelected;
+            oFormularioSelected = formularioSelected;
         }
 
         private void MostrarDatos()
         {
-            if (oPerfilSelected != null)
+            if (oFormularioSelected != null)
             {
-                txtNombrePerfil.Text = oPerfilSelected.Nombre;
+                txtNombreFormulario.Text = oFormularioSelected.Nombre;
             }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            var oPerfil = new Perfil();
+            var oFormulario = new Formulario();
             switch (formMode)
             {
                 case FormMode.nuevo:
                     {
 
-                        oPerfil.Nombre = txtNombrePerfil.Text;
+                        oFormulario.Nombre = txtNombreFormulario.Text;
 
-                        if (!String.IsNullOrEmpty(txtNombrePerfil.Text))
+                        if (!String.IsNullOrEmpty(txtNombreFormulario.Text))
                         {
                             
-                            if (oPerfilService.CrearPerfil(oPerfil) == true)
+                            if (oFormularioService.CrearFormulario(oFormulario) == true)
                             {
-                                MessageBox.Show("Perfil insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Formulario insertado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
-                                MessageBox.Show("El perfil ya existe!");
+                                MessageBox.Show("El Formulario ya existe!");
                                 this.Close();
 
                             }
@@ -116,7 +116,7 @@ namespace ProyectoBugs.GUILayer
 
                         else
                         {
-                            MessageBox.Show("El Nombre de Perfil no debe estar vacío!");
+                            MessageBox.Show("El Nombre de formulario no debe estar vacío!");
                         }
 
                         break;
@@ -127,24 +127,24 @@ namespace ProyectoBugs.GUILayer
                 case FormMode.actualizar:
                     {
 
-                        oPerfil.Nombre = txtNuevoNombre.Text;
-                        oPerfil.IdPerfil = oPerfilSelected.IdPerfil;
+                        oFormulario.Nombre = txtNuevoNombre.Text;
+                        oFormulario.IdFormulario = oFormularioSelected.IdFormulario;
 
                         
 
                         if (txtNuevoNombre.Text !="")
                         {
                             if (MessageBox.Show("Seguro que desea modificar el" +
-                                "perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                "formulario seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                             {
-                                oPerfilService.actualizarPerfil(oPerfil);
-                                MessageBox.Show("Perfil modificado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                oFormularioService.actualizarFormulario(oFormulario);
+                                MessageBox.Show("Formulario modificado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
 
 
                             }
                             else {
-                                MessageBox.Show("El nombre de perfil no debe estar vacío!");
+                                MessageBox.Show("El nombre de formulario no debe estar vacío!");
 
 
                         }
@@ -156,23 +156,24 @@ namespace ProyectoBugs.GUILayer
                 case FormMode.eliminar:
                     {
 
-                        oPerfil = oPerfilSelected;
-                        if (MessageBox.Show("Seguro que desea eliminar el perfil seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                        oFormulario = oFormularioSelected;
+                        if (MessageBox.Show("Seguro que desea eliminar el formulario seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                         {
-                            oPerfilService.borrarPerfil(oPerfil);
-                            MessageBox.Show("Perfil eliminado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            oFormularioService.borrarFormulario(oFormulario);
+                            MessageBox.Show("Formulario eliminado!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
 
                         else
                         {
-                            MessageBox.Show("Ha ocurrido un error al intentar borrar el perfil!", "Error");
+                            MessageBox.Show("Ha ocurrido un error al intentar borrar el formulario!", "Error");
                         }
                     }
                         break;
                     }
             }
-        }
+
+    }
 
         
     }

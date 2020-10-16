@@ -97,12 +97,7 @@ namespace ProyectoBugs.GUILayer.Princ
 
         private void btnFormularios_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender);
-            if (frmActivo != null)
-            {
-                frmActivo.Close();
-            }
-
+            AbrirFormulariosEnPanelPrincipal(new frmFormularios(), sender);
         }
 
         private void btnPermisos_Click(object sender, EventArgs e)

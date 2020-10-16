@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BugTacker.Entities
 {
-    class Formulario
+    public class Formulario
     {
         public int IdFormulario { get; set; }
         public string Nombre { get; set; }

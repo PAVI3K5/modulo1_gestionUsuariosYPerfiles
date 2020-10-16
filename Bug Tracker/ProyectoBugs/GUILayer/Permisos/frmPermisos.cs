@@ -32,8 +32,6 @@ namespace ProyectoBugs.GUILayer.Formularios
             cmbPerfiles.DisplayMember = "nombre";
             cmbPerfiles.ValueMember = "IdPerfil";
             cmbPerfiles.SelectedItem = null;
-
-
         }
 
 

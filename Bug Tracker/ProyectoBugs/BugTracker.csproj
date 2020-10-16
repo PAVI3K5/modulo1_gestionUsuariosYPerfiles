@@ -56,6 +56,18 @@
     <Compile Include="Entities\Formulario.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="GUILayer\Formulario\frmCampoFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Formulario\frmCampoFormulario.Designer.cs">
+      <DependentUpon>frmCampoFormulario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Formulario\frmFormularios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Formulario\frmFormularios.Designer.cs">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\Permisos\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUILayer\Formulario\frmCampoFormulario.resx">
+      <DependentUpon>frmCampoFormulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Formulario\frmFormularios.resx">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Permisos\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_exclamation-mark-triangle-sign-caution_3643775 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUILayer\Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
