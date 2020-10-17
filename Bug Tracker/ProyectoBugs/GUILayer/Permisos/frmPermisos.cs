@@ -1,5 +1,5 @@
 ﻿using ProyectoBugs.BusinessLayer;
-
+using ProyectoBugs.GUILayer.Permisos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,8 +87,10 @@ namespace ProyectoBugs.GUILayer.Formularios
 
         }
 
-        private void cmbPerfiles_DropDown(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
+            frmCampoPermisos campoPermisos = new frmCampoPermisos();
+            campoPermisos.ShowDialog();
         }
     }
 }

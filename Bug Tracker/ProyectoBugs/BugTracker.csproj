@@ -68,6 +68,12 @@
     <Compile Include="GUILayer\Formulario\frmFormularios.Designer.cs">
       <DependentUpon>frmFormularios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\Permisos\frmCampoPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Permisos\frmCampoPermisos.Designer.cs">
+      <DependentUpon>frmCampoPermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\Permisos\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Formulario\frmFormularios.resx">
       <DependentUpon>frmFormularios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Permisos\frmCampoPermisos.resx">
+      <DependentUpon>frmCampoPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Permisos\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>

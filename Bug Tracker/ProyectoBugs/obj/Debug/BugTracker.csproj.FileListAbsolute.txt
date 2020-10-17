@@ -127,3 +127,4 @@ F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI
 F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.pdb
 F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmFormularios.resources
 F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.frmCampoFormulario.resources
+F:\Facultad\2020 PANDEMIA CHALLENGE\PAV - Programacion Aplicaciones Visuales\TPI PAV\modulo1_gestionUsuariosYPerfiles\Bug Tracker\ProyectoBugs\obj\Debug\ProyectoBugs.GUILayer.Permisos.frmCampoPermisos.resources
