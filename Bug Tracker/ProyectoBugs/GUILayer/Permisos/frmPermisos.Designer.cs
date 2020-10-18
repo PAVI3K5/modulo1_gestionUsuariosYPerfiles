@@ -33,13 +33,15 @@
             this.dgvFormularios = new System.Windows.Forms.DataGridView();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvPerfilesUsuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormularios)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPerfiles
@@ -56,10 +58,10 @@
             // dgvFormularios
             // 
             this.dgvFormularios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFormularios.Location = new System.Drawing.Point(0, 100);
+            this.dgvFormularios.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvFormularios.Location = new System.Drawing.Point(302, 100);
             this.dgvFormularios.Name = "dgvFormularios";
-            this.dgvFormularios.Size = new System.Drawing.Size(592, 354);
+            this.dgvFormularios.Size = new System.Drawing.Size(290, 354);
             this.dgvFormularios.TabIndex = 1;
             // 
             // lblPerfil
@@ -83,6 +85,21 @@
             this.panel2.Size = new System.Drawing.Size(105, 354);
             this.panel2.TabIndex = 6;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.Location = new System.Drawing.Point(17, 165);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(72, 68);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -95,31 +112,6 @@
             this.btnEditar.Size = new System.Drawing.Size(70, 73);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblPerfil);
-            this.panel3.Controls.Add(this.cmbPerfiles);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(697, 100);
-            this.panel3.TabIndex = 11;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(19, 142);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(72, 68);
-            this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // BtnEliminar
             // 
@@ -135,11 +127,31 @@
             this.BtnEliminar.TabIndex = 8;
             this.BtnEliminar.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblPerfil);
+            this.panel3.Controls.Add(this.cmbPerfiles);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(697, 100);
+            this.panel3.TabIndex = 11;
+            // 
+            // dgvPerfilesUsuario
+            // 
+            this.dgvPerfilesUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfilesUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvPerfilesUsuario.Location = new System.Drawing.Point(12, 100);
+            this.dgvPerfilesUsuario.Name = "dgvPerfilesUsuario";
+            this.dgvPerfilesUsuario.Size = new System.Drawing.Size(290, 354);
+            this.dgvPerfilesUsuario.TabIndex = 12;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 454);
+            this.Controls.Add(this.dgvPerfilesUsuario);
             this.Controls.Add(this.dgvFormularios);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -149,6 +161,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +176,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvPerfilesUsuario;
     }
 }
